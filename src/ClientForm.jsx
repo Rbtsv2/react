@@ -13,6 +13,7 @@ class ClientForm extends Component {
     }
 
     handleSubmit = (event) => {
+
         event.preventDefault();
         const id = new Date().getTime(); // obtenir un id unique
         const nom = this.state.newClient;
@@ -23,13 +24,11 @@ class ClientForm extends Component {
 
     render() {
 
-        return ( 
-
+        return (
             <form onSubmit={this.handleSubmit}> 
                 <input onChange={this.handleChange} value={this.state.newClient} type="text" placeholder="Ajouter un client"/>
                 <button>Confirmer</button>
             </form>
-  
         );
         
     };

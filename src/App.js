@@ -7,6 +7,10 @@ import React from "react";
 import Client from "./Client";
 import ClientForm from "./ClientForm";
 
+import Counter from "./Counter";
+
+
+
 class App extends React.Component {
 
   //clientInput = React.createRef();
@@ -40,6 +44,7 @@ class App extends React.Component {
     return  (
     <div>
       <h1>{title}</h1> {/* interpolation  */}
+      <Counter />
        <ul>
          {this.state.clients.map(client => (
          <Client details={client} onDelete= {this.handleDelete}/>
